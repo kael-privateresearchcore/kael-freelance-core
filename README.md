@@ -50,3 +50,14 @@ git clone https://github.com/kael-privateresearchcore/kael-freelance-core.git
 cd kael-freelance-core/server
 npm install
 npm run dev
+Server: http://localhost:3000
+
+📅 Key Dates
+Event	Date
+Pre-Registration	June 5 – July 14, 2026
+🚀 Official Launch	July 15, 2026
+⚠️ License
+© 2026 Kael-Freelance Core. All rights reserved.
+This project is not open source.
+
+<p align="center"><b>Made with ❤️ in Myanmar 🇲🇲</b></p> ```
