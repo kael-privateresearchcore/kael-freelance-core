@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Register – Kael-Freelance Core</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(160deg, #0a0a1a 0%, #111128 30%, #0d0d20 60%, #0a0a18 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f0f0f5;
+        }
+        .container {
+            background: #16161f;
+            border: 1px solid #252535;
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        .logo {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #6c5ce7, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7a7a90;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(0, 212, 170, 0.15);
+            color: #00d4aa;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            color: #b0b0c0;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            background: #1a1a25;
+            border: 1px solid #252535;
+            border-radius: 10px;
+            color: #f0f0f5;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #6c5ce7;
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+        }
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #6c5ce7, #a855f7);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 0.5rem;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 35px rgba(108, 92, 231, 0.35);
+        }
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .success-box {
+            display: none;
+            background: rgba(0, 212, 170, 0.15);
+            border: 1px solid #00d4aa;
+            border-radius: 14px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .success-box h2 {
+            color: #00d4aa;
+            margin-bottom: 0.5rem;
+        }
+        .success-box p {
+            color: #b0b0c0;
+            margin-bottom: 0.5rem;
+        }
+        .benefits {
+            background: #1a1a25;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+        .benefits h3 {
+            color: #f5a623;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits ul li {
+            color: #b0b0c0;
+            font-size: 0.85rem;
+            padding: 3px 0;
+        }
+        .error-msg {
+            color: #ff4757;
+            font-size: 0.8rem;
+            display: none;
+            margin-top: 5px;
+        }
+        .count {
+            text-align: center;
+            color: #7a7a90;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+        .count span {
+            color: #f5a623;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="formContainer">
+        <div class="logo">Kael-Freelance Core</div>
+        <h1>Pre-Register Now</h1>
+        <p class="subtitle">Myanmar's First Freelance Platform</p>
+        <div style="text-align: center;"><span class="badge">🚀 Launching July 15, 2026</span></div>
+        
+        <div class="count">
+            📝 <span id="userCount">...</span> people already pre-registered!
+        </div>
+
+        <div class="benefits">
+            <h3>🎁 Pre-Registration Benefits</h3>
+            <ul>
+                <li>✅ 20 Days 0% Commission (July 15 - Aug 4)</li>
+                <li>✅ Zero Hidden Fees</li>
+                <li>✅ Priority Support</li>
+                <li>✅ Early Access Badge</li>
+            </ul>
+        </div>
+
+        <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" id="preregName" placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" id="preregEmail" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+            <label>I want to join as *</label>
+            <select id="preregRole">
+                <option value="freelancer">Freelancer – Offer Services</option>
+                <option value="client">Client – Hire Talent</option>
+            </select>
+        </div>
+        <div class="error-msg" id="preregError"></div>
+        <button class="btn" id="preregSubmitBtn" onclick="submitPreReg()">🚀 Pre-Register Now (Free)</button>
+        <p style="text-align:center;margin-top:1rem;color:#7a7a90;font-size:0.8rem;">📅 Pre-Registration: June 5 – July 14</p>
+    </div>
+
+    <div class="container" id="successContainer" style="display:none;">
+        <div class="success-box">
+            <h2>✅ Pre-Registration Successful!</h2>
+            <p id="successName"></p>
+            <p style="color:#7a7a90;">Check your email for confirmation</p>
+            <div class="benefits" style="margin-top:1rem;">
+                <h3>🎁 Your Exclusive Benefits:</h3>
+                <ul>
+                    <li>✅ 20 Days 0% Commission</li>
+                    <li>✅ July 15 – August 4, 2026</li>
+                    <li>✅ Priority Support</li>
+                    <li>✅ Early Access Badge</li>
+                </ul>
+            </div>
+            <p style="color:#f5a623;font-weight:600;">🚀 Launch Date: July 15, 2026</p>
+            <p style="color:#7a7a90;font-size:0.8em;">We'll send you a reminder!</p>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3000/api';
+
+        // Load pre-registration count
+        async function loadCount() {
+            try {
+                const res = await fetch(`${API_URL}/pre-register/count`);
+                const data = await res.json();
+                document.getElementById('userCount').textContent = data.count || 0;
+            } catch {
+                document.getElementById('userCount').textContent = '...';
+            }
+        }
+
+        async function submitPreReg() {
+            const name = document.getElementById('preregName').value.trim();
+            const email = document.getElementById('preregEmail').value.trim();
+            const role = document.getElementById('preregRole').value;
+            const errorEl = document.getElementById('preregError');
+            const btn = document.getElementById('preregSubmitBtn');
+
+            if (!name || !email) {
+                errorEl.textContent = 'Please fill in all fields';
+                errorEl.style.display = 'block';
+                return;
+            }
+
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
+            errorEl.style.display = 'none';
+
+            try {
+                const res = await fetch(`${API_URL}/pre-register`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, role })
+                });
+                const data = await res.json();
+
+                if (data.success) {
+                    document.getElementById('successName').textContent = `Welcome, ${name}!`;
+                    document.getElementById('formContainer').style.display = 'none';
+                    document.getElementById('successContainer').style.display = 'block';
+                    loadCount();
+                } else {
+                    errorEl.textContent = data.message || 'Error occurred';
+                    errorEl.style.display = 'block';
+                }
+            } catch {
+                errorEl.textContent = 'Server connection error. Please try again.';
+                errorEl.style.display = 'block';
+            }
+
+            btn.textContent = '🚀 Pre-Register Now (Free)';
+            btn.disabled = false;
+        }
+
+        loadCount();
+    </script>
+</body>
+</html>
